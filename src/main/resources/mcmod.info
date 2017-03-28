@@ -1,0 +1,16 @@
+[
+{
+  "modid": "infinitely_spreading_water",
+  "name": "Infinitely Spreading Water",
+  "description": "Fill up your pools and dams with these creative items",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Techern_Cruz, HoldYourWaffle"],
+  "credits": "Alice and Rogue for inspiring me to start again",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
