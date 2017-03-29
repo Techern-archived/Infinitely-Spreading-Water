@@ -2,6 +2,7 @@ package org.techern.infinitewater.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
 
 /**
  * A {@link Block} for infinitely spreading water
@@ -18,6 +19,7 @@ public class BlockInfinitelySpreadingWater extends Block {
     public BlockInfinitelySpreadingWater() {
         super(Material.WATER);
 
+        this.setCreativeTab(CreativeTabs.MISC);
         this.setUnlocalizedName("infinitely_spreading_water");
         this.setRegistryName("infinitely_spreading_water");
         this.setBlockUnbreakable();
