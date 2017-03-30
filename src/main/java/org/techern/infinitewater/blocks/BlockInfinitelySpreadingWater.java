@@ -30,21 +30,9 @@ public class BlockInfinitelySpreadingWater extends Block {
         super(Material.BARRIER);
 
         this.setCreativeTab(CreativeTabs.MISC);
-        this.setTickRandomly(true);
         this.setUnlocalizedName("infinitely_spreading_water");
         this.setRegistryName("infinitely_spreading_water");
         this.setBlockUnbreakable();
-    }
-
-    /**
-     * Gets the tick rate for this {@link BlockInfinitelySpreadingWater}
-     *
-     * @param worldIn The {@link World} that we're in
-     * @since 1.0.0
-     */
-    public int tickRate(World worldIn)
-    {
-        return 1;
     }
 
     /**
@@ -85,7 +73,7 @@ public class BlockInfinitelySpreadingWater extends Block {
 
         if (state.equals(Blocks.AIR.getDefaultState())) {
             world.setBlockState(position, getDefaultState());
-            world.scheduleBlockUpdate(position, this, 10, 1);
+            world.scheduleBlockUpdate(position, this, 20, 1);
         }
     }
 
@@ -102,6 +90,6 @@ public class BlockInfinitelySpreadingWater extends Block {
     public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
         super.onBlockPlacedBy(worldIn, pos, state, placer, stack);
 
-        worldIn.scheduleBlockUpdate(pos, this, 15, 2);
+        worldIn.scheduleBlockUpdate(pos, this, 100, 2);
     }
 }
