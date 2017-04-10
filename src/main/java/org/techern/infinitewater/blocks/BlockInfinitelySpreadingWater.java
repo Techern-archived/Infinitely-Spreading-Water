@@ -70,10 +70,18 @@ public class BlockInfinitelySpreadingWater extends Block {
 
         IBlockState state = world.getBlockState(position);
 
+        if (world.isAirBlock(position)) {
 
-        if (state.equals(Blocks.AIR.getDefaultState())) {
             world.setBlockState(position, getDefaultState());
             world.scheduleBlockUpdate(position, this, 20, 1);
+        } else if (world.getBlockState(position).getBlock() instanceof BlockLiquid) {
+
+            //For some reason 0 is full. You'd think 0 would be empty/almost empty. Eh
+            if (world.getBlockState(position).getValue(BlockLiquid.LEVEL) > 0) {
+                world.setBlockState(position, getDefaultState());
+                world.scheduleBlockUpdate(position, this, 20, 1);
+            }
+
         }
     }
 
