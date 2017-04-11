@@ -7,7 +7,7 @@ import net.minecraft.item.Item;
  *
  * @since 1.0.0
  */
-public abstract class CommonProxy {
+public class CommonProxy {
 
     /**
      * Registers an {@link Item} in the {@link net.minecraft.client.renderer.ItemModelMesher}
@@ -18,7 +18,9 @@ public abstract class CommonProxy {
      *
      * @since 1.0.0
      */
-    public abstract void registerItemModelMesher(Item item, int metadata, String itemName);
+    public void registerItemModelMesher(Item item, int metadata, String itemName) {
+
+    }
 
     /**
      * Registers an {@link Item} in the {@link net.minecraft.client.renderer.ItemModelMesher}
@@ -30,7 +32,9 @@ public abstract class CommonProxy {
      *
      * @since 1.0.0
      */
-    public abstract void registerItemModelMesher(Item item, int metadata, String itemName, String metadataNameAndValue);
+    public void registerItemModelMesher(Item item, int metadata, String itemName, String metadataNameAndValue) {
+
+    }
 
 
 }
