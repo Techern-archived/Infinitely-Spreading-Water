@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "infinitely_spreading_water:items/infinite_water_bucket"
+  }
+}

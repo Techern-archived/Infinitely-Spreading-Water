@@ -1,0 +1,7 @@
+#Language file for US English
+
+#Blocks first
+tile.infinitely_spreading_water.name=Infinite Ocean
+
+#Then items
+item.infinitely_spreading_water_bucket.name=Pail o' Infinite Ocean

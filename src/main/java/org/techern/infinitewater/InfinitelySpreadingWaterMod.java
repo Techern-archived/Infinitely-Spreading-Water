@@ -2,7 +2,6 @@ package org.techern.infinitewater;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -11,6 +10,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import org.apache.logging.log4j.Logger;
 import org.techern.infinitewater.blocks.BlockInfinitelySpreadingWater;
+import org.techern.infinitewater.items.ItemInfinitelySpreadingWaterBucket;
 import org.techern.infinitewater.proxy.CommonProxy;
 
 /**
@@ -59,6 +59,13 @@ public class InfinitelySpreadingWaterMod
     public static Block INFINITELY_SPREADING_WATER_BLOCK = new BlockInfinitelySpreadingWater();
 
     /**
+     * The instance of {@link ItemInfinitelySpreadingWaterBucket}
+     *
+     * @since 1.1.0
+     */
+    public static Item INFINITELY_SPREADING_WATER_BUCKET = new ItemInfinitelySpreadingWaterBucket();
+
+    /**
      * Called when the {@link FMLPreInitializationEvent} fires
      *
      * @param event The {@link FMLPreInitializationEvent}
@@ -82,8 +89,11 @@ public class InfinitelySpreadingWaterMod
     public void initialize(FMLInitializationEvent event)
     {
         GameRegistry.register(INFINITELY_SPREADING_WATER_BLOCK);
-        GameRegistry.register(new ItemBlock(INFINITELY_SPREADING_WATER_BLOCK).setRegistryName(INFINITELY_SPREADING_WATER_BLOCK.getRegistryName()));
+        //GameRegistry.register(new ItemBlock(INFINITELY_SPREADING_WATER_BLOCK).setRegistryName(INFINITELY_SPREADING_WATER_BLOCK.getRegistryName()));
 
-        PROXY.registerItemModelMesher(Item.getItemFromBlock(INFINITELY_SPREADING_WATER_BLOCK), 0, "infinitely_spreading_water", "inventory");
+
+        GameRegistry.register(INFINITELY_SPREADING_WATER_BUCKET);
+
+        PROXY.registerItemModelMesher(INFINITELY_SPREADING_WATER_BUCKET, 0, "infinitely_spreading_water_bucket", "inventory");
     }
 }

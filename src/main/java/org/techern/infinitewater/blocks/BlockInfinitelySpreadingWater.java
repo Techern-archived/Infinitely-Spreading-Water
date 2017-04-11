@@ -29,7 +29,7 @@ public class BlockInfinitelySpreadingWater extends Block {
     public BlockInfinitelySpreadingWater() {
         super(Material.BARRIER);
 
-        this.setCreativeTab(CreativeTabs.MISC);
+        //this.setCreativeTab(CreativeTabs.MISC);
         this.setUnlocalizedName("infinitely_spreading_water");
         this.setRegistryName("infinitely_spreading_water");
         this.setBlockUnbreakable();
