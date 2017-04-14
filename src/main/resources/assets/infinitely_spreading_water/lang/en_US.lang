@@ -3,5 +3,8 @@
 #Blocks first
 tile.infinitely_spreading_water.name=Infinitely Spreading Water
 
+#Then the creative tab
+itemGroup.spreading_water=Spreading Water
+
 #Then items
 item.infinitely_spreading_water_bucket.name=Bucket of Infinitely Spreading Water

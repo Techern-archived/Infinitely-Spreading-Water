@@ -1,7 +1,9 @@
 package org.techern.infinitewater;
 
 import net.minecraft.block.Block;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -50,6 +52,19 @@ public class InfinitelySpreadingWaterMod
     @SidedProxy(clientSide = "org.techern.infinitewater.proxy.ClientProxy",
             serverSide = "org.techern.infinitewater.proxy.CommonProxy")
     public static CommonProxy PROXY;
+
+    /**
+     * The {@link CreativeTabs} for {@link InfinitelySpreadingWaterMod}
+     *
+     * @since 1.1.0
+     */
+    public static CreativeTabs SPREADING_WATER_TAB = new CreativeTabs("spreading_water") {
+
+        @Override
+        public ItemStack getTabIconItem() {
+            return new ItemStack(INFINITELY_SPREADING_WATER_BUCKET);
+        }
+    };
 
     /**
      * The instance of {@link BlockInfinitelySpreadingWater}

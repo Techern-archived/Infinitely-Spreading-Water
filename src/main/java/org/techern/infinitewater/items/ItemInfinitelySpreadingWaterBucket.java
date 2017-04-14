@@ -31,7 +31,7 @@ public class ItemInfinitelySpreadingWaterBucket extends Item {
      */
     public ItemInfinitelySpreadingWaterBucket() {
         this.maxStackSize = 1;
-        this.setCreativeTab(CreativeTabs.MISC);
+        this.setCreativeTab(InfinitelySpreadingWaterMod.SPREADING_WATER_TAB);
 
         this.setUnlocalizedName("infinitely_spreading_water_bucket");
         this.setRegistryName("infinitely_spreading_water_bucket");
